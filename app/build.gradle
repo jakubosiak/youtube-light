@@ -1,0 +1,70 @@
+import com.google.gms.googleservices.GoogleServicesPlugin
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.android.youtubebardzo"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation('androidx.appcompat:appcompat:1.1.0-alpha01') {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+    implementation('androidx.core:core-ktx:1.1.0-alpha03') {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+    implementation('androidx.constraintlayout:constraintlayout:2.0.0-alpha3'){
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+
+    implementation('pub.devrel:easypermissions:0.3.0') {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+    implementation('com.google.api-client:google-api-client-android:1.25.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation('com.google.apis:google-api-services-youtube:v3-rev206-1.25.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+
+    implementation('com.pierfrancescosoffritti.androidyoutubeplayer:core:9.0.1')
+
+    //Jackson Converter
+    implementation 'com.squareup.retrofit2:converter-jackson:2.3.0'
+
+    implementation('com.google.firebase:firebase-messaging:17.3.2') {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+    implementation('com.google.firebase:firebase-core:16.0.6') {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+
+    implementation("android.arch.work:work-runtime-ktx:1.0.0-beta01") {
+        exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+
+    GoogleServicesPlugin.config.disableVersionCheck = true
+}

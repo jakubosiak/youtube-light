@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "902560313681",
+    "firebase_url": "https://jutub-226221.firebaseio.com",
+    "project_id": "jutub-226221",
+    "storage_bucket": "jutub-226221.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902560313681:android:38c95b98eccf5751",
+        "android_client_info": {
+          "package_name": "com.example.android.youtubebardzo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902560313681-6shi9pugveu64l7nvlocro7pg4amk4gd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.youtubebardzo",
+            "certificate_hash": "9f218a829e9a4e8571125d48c958a5999de4c252"
+          }
+        },
+        {
+          "client_id": "902560313681-4ft32m2btojnt8h6b6c2ds4epldmsu4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbNMe2RFRaDzB6QCH_P9VO67HDggRfNKY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902560313681-4ft32m2btojnt8h6b6c2ds4epldmsu4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
