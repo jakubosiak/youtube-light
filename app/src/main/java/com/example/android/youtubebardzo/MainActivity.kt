@@ -12,13 +12,14 @@ import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.AbstractYouTubePlayerListener
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.view_search_input.*
 import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.search_layout)
         //initYoutubePlayer()
         val youtubeDataService = getYoutubeService()
         val searchQueryRequest = youtubeDataService.Search().list("snippet").setMaxResults(2).setQ("kuban").setType("")
@@ -34,10 +35,12 @@ class MainActivity : AppCompatActivity() {
             Log.v("onNewToken", result.result?.token)
         }
 
+        searchClearIMG.setOnClickListener {
 
+        }
     }
 
-    private fun initYoutubePlayer() {
+   /* private fun initYoutubePlayer() {
         ytPlayer.initialize({ player ->
             player.addListener(object : AbstractYouTubePlayerListener() {
                 override fun onReady() {
@@ -47,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             })
         }, true)
         ytPlayer.enableBackgroundPlayback(true)
-    }
+    }*/
 
     private fun getYoutubeService(): YouTube {
         val transport = AndroidHttp.newCompatibleTransport()
